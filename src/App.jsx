@@ -1,24 +1,53 @@
+// import React from 'react';
+// import { useState } from 'react'
+// import './index.css'
+// import Navbar from './components/Navbar'
+// import Home from './components/Home'
+// import Services from './components/Services'
+// import AboutUs from './components/AboutUs'
+
+// function App() {
+//   const [count, setCount] = useState(0)
+
+//   return (
+//     <>
+//      <div>
+//       <Navbar/>
+//       <Home/>
+//       <Services/>
+//       <AboutUs/>
+//      </div>
+//     </>
+//   )
+// }
+
+// export default App
 import React from 'react';
-import { useState } from 'react'
-import './index.css'
-import Sidenav from './components/Sidenav'
-import Home from './components/Home'
-import Services from './components/Services'
-import AboutUs from './components/AboutUs'
+import './index.css';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import Services from './components/Services';
+import AboutUs from './components/AboutUs';
+// import Contact from './components/Contact';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-     <div>
-      <Sidenav/>
-      <Home/>
-      <Services/>
-      <AboutUs/>
-     </div>
+      <Navbar />
+      <div id="home">
+        <Home />
+      </div>
+      <div id="services">
+        <Services />
+      </div>
+      <div id="about">
+        <AboutUs />
+      </div>
+      {/* <div id="contact">
+        <Contact />
+      </div> */}
     </>
-  )
+  );
 }
 
-export default App
+export default App;
