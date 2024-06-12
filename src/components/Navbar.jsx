@@ -37,8 +37,8 @@ const Navbar = () => {
               <a href="#about" className="inline-flex items-center px-1 pt-1 text-sm font-medium text-white hover:text-gray-900">
                 About Us
               </a>
-              <a href="#contact" className="inline-flex items-center px-1 pt-1 text-sm font-medium text-white hover:text-gray-900">
-                Contact
+              <a href="#quote" className="inline-flex items-center px-1 pt-1 text-sm font-medium text-white hover:text-gray-900">
+                Get A Quote
               </a>
             </div>
             <div className="-mr-2 flex items-center md:hidden">
@@ -62,8 +62,8 @@ const Navbar = () => {
               <a href="#about" onClick={closeNav} className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-900 hover:bg-gray-100">
                 About Us
               </a>
-              <a href="#contact" onClick={closeNav} className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-900 hover:bg-gray-100">
-                Contact
+              <a href="#quote" onClick={closeNav} className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-900 hover:bg-gray-100">
+                Get A Quote
               </a>
             </div>
           </div>
