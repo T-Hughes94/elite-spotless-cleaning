@@ -40,6 +40,9 @@ const Navbar = () => {
               <a href="#quote" className="inline-flex items-center px-1 pt-1 text-sm font-medium text-white hover:text-[#94c2d2]">
                 Get A Quote
               </a>
+              <a href="#footer" className="inline-flex items-center px-1 pt-1 text-sm font-medium text-white hover:text-[#94c2d2]">
+                Contact
+              </a>
             </div>
             <div className="-mr-2 flex items-center md:hidden">
               <button onClick={toggleNav} className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-900">
@@ -64,6 +67,9 @@ const Navbar = () => {
               </a>
               <a href="#quote" onClick={closeNav} className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-900 hover:bg-gray-100">
                 Get A Quote
+              </a>
+              <a href="#footer" onClick={closeNav} className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-900 hover:bg-gray-100">
+                Contact
               </a>
             </div>
           </div>
