@@ -28,6 +28,7 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Services from './components/Services';
 import AboutUs from './components/AboutUs';
+import QuoteForm from './components/QuoteForm';
 
 // import Contact from './components/Contact';
 
@@ -44,9 +45,9 @@ function App() {
       <div id="about">
         <AboutUs />
       </div>
-      {/* <div id="contact">
-        <Contact />
-      </div> */}
+      <div id="quote">
+        <QuoteForm />
+      </div>
     </>
   );
 }
