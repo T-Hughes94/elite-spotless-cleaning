@@ -1,10 +1,10 @@
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
-import bkgrndLogo from '../assets/eclbkgrnd.jpg';
+import ecsLogo from '../assets/ecslogo.png';
 
 const Home = () => {
   return (
-    <div id="home" className="relative w-full h-screen flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: `url(${bkgrndLogo})` }}>
+    <div id="home" className="relative w-full h-screen flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: `url(${ecsLogo})` }}>
       <div className="bg-white/70 p-8 rounded-lg shadow-lg max-w-3xl text-center">
         <h1 className="text-4xl font-bold mb-4 text-gray-800">Elite Spotless Cleaning</h1>
         <p className="text-lg text-gray-700 mb-4">
