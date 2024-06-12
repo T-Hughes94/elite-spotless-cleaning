@@ -3,13 +3,15 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
 function QuoteForm() {
-  const [service, setService] = useState('');
+  const [serviceCategory, setServiceCategory] = useState('');
+  const [serviceType, setServiceType] = useState('');
   const [today, setToday] = useState(new Date());
   const [startDate, setStartDate] = useState(new Date());
-  const [endDate, setEndDate] = useState(new Date());
+  const [numberOfSpecialists, setNumberOfSpecialists] = useState('1');
+  const [additionalInfo, setAdditionalInfo] = useState('');
 
   const services = [
-    'Residential Cleaning',
+    { category: 'Residential Cleaning', types: ['Basic Clean', 'Deep Clean', 'Regular Maintenance'] },
     'Move Out Cleaning',
     'Post Construction Cleaning'
   ];
@@ -22,13 +24,12 @@ function QuoteForm() {
     //   name: e.target.name.value,
     //   phone: e.target.phone.value,
     //   email: e.target.email.value,
-    //   service: service,
+    //   serviceCategory: serviceCategory,
+    //   serviceType: serviceType,
     //   today: today.toLocaleDateString(),
     //   startDate: startDate.toLocaleDateString(),
-    //   endDate: endDate.toLocaleDateString(),
-    //   startTime: e.target.starttime.value,
-    //   endTime: e.target.endtime.value,
-    //   info: e.target.info.value
+    //   numberOfSpecialists: numberOfSpecialists,
+    //   additionalInfo: additionalInfo
     // };
     // emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams, 'YOUR_USER_ID')
     //   .then((response) => {
@@ -59,14 +60,29 @@ function QuoteForm() {
               <input className='border-2 rounded-lg p-3 border-gray-300 focus:border-[#001b5e] focus:ring-[#001b5e]' type='email' name='email' required />
             </div>
             <div className='flex flex-col'>
-              <label className='uppercase text-sm font-semibold py-2'>Service</label>
-              <select className='border-2 rounded-lg p-3 border-gray-300 focus:border-[#001b5e] focus:ring-[#001b5e]' name='service' value={service} onChange={(e) => setService(e.target.value)} required>
-                <option value="">Select a service</option>
+              <label className='uppercase text-sm font-semibold py-2'>Service Category</label>
+              <select className='border-2 rounded-lg p-3 border-gray-300 focus:border-[#001b5e] focus:ring-[#001b5e]' name='serviceCategory' value={serviceCategory} onChange={(e) => setServiceCategory(e.target.value)} required>
+                <option value="">Select a service category</option>
                 {services.map((service, index) => (
-                  <option key={index} value={service}>{service}</option>
+                  typeof service === 'object' ? (
+                    <option key={index} value={service.category}>{service.category}</option>
+                  ) : (
+                    <option key={index} value={service}>{service}</option>
+                  )
                 ))}
               </select>
             </div>
+            {serviceCategory === 'Residential Cleaning' && (
+              <div className='flex flex-col'>
+                <label className='uppercase text-sm font-semibold py-2'>Service Type</label>
+                <select className='border-2 rounded-lg p-3 border-gray-300 focus:border-[#001b5e] focus:ring-[#001b5e]' name='serviceType' value={serviceType} onChange={(e) => setServiceType(e.target.value)} required>
+                  <option value="">Select a service type</option>
+                  {services.find(service => service.category === 'Residential Cleaning').types.map((type, index) => (
+                    <option key={index} value={type}>{type}</option>
+                  ))}
+                </select>
+              </div>
+            )}
             <div className='flex flex-col'>
               <label className='uppercase text-sm font-semibold py-2'>Today's Date</label>
               <DatePicker
@@ -84,33 +100,21 @@ function QuoteForm() {
                 selected={startDate}
                 onChange={(date) => setStartDate(date)}
                 className='border-2 rounded-lg p-3 border-gray-300 focus:border-[#001b5e] focus:ring-[#001b5e] w-full'
-                name='startday'
+                name='startDate'
                 dateFormat='MM/dd/yyyy'
                 required
               />
             </div>
             <div className='flex flex-col'>
-              <label className='uppercase text-sm font-semibold py-2'>Start Time</label>
-              <input className='border-2 rounded-lg p-3 border-gray-300 focus:border-[#001b5e] focus:ring-[#001b5e]' type='time' name='starttime' required />
-            </div>
-            <div className='flex flex-col'>
-              <label className='uppercase text-sm font-semibold py-2'>End Date</label>
-              <DatePicker
-                selected={endDate}
-                onChange={(date) => setEndDate(date)}
-                className='border-2 rounded-lg p-3 border-gray-300 focus:border-[#001b5e] focus:ring-[#001b5e] w-full'
-                name='endday'
-                dateFormat='MM/dd/yyyy'
-                required
-              />
-            </div>
-            <div className='flex flex-col'>
-              <label className='uppercase text-sm font-semibold py-2'>End Time</label>
-              <input className='border-2 rounded-lg p-3 border-gray-300 focus:border-[#001b5e] focus:ring-[#001b5e]' type='time' name='endtime' required />
+              <label className='uppercase text-sm font-semibold py-2'>Number Of Specialists</label>
+              <select className='border-2 rounded-lg p-3 border-gray-300 focus:border-[#001b5e] focus:ring-[#001b5e]' name='numberOfSpecialists' value={numberOfSpecialists} onChange={(e) => setNumberOfSpecialists(e.target.value)} required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+              </select>
             </div>
             <div className='flex flex-col col-span-2'>
               <label className='uppercase text-sm font-semibold py-2'>Additional Information</label>
-              <textarea className='border-2 rounded-lg p-3 border-gray-300 focus:border-[#001b5e] focus:ring-[#001b5e] w-full' rows='10' name='info'></textarea>
+              <textarea className='border-2 rounded-lg p-3 border-gray-300 focus:border-[#001b5e] focus:ring-[#001b5e] w-full' rows='10' name='info' value={additionalInfo} onChange={(e) => setAdditionalInfo(e.target.value)}></textarea>
             </div>
           </div>
           <div className='flex justify-center mt-4'>
