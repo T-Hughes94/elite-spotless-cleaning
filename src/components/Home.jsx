@@ -12,7 +12,13 @@ const Home = () => {
   };
 
   return (
-    <div id="home" className="relative w-full h-screen flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: `url(${ecsLogo})` }}>
+    <div id="home" className="relative w-full h-screen flex items-center justify-center bg-cover bg-center"
+      style={{ 
+        backgroundImage: `url(${ecsLogo})`,
+        backgroundSize: '90% 140%', // Adjust the background size here
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
       <div className="bg-white/70 p-8 rounded-lg shadow-lg max-w-3xl text-center">
         <h1 className="text-4xl font-bold mb-4 text-gray-800">Elite Spotless Cleaning</h1>
         <p className="text-2xl text-gray-950 mb-4">
