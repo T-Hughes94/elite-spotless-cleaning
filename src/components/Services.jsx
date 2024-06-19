@@ -30,7 +30,7 @@ const Services = () => {
             title="Move Out Cleaning" 
             description={
               <>
-                <h2 className="text-xl font-semibold">Move Out Cleaning - $65/hr per cleaner</h2>
+                <h2 className="text-xl font-semibold">Move Out Cleaning - $70/hr per cleaner</h2>
                 <p>Our move out cleaning services are tailored to the specific needs of relocating in New York City, we understand the overwhelming nature of relocation here. Whether you're moving to a new home or preparing to leave your current one, our professional cleaners will leave your space looking pristine.</p>
                 <h3 className="text-lg font-semibold">Moving Out Services</h3>
                 <p>When moving out, it's essential to leave your property in top condition to secure your security deposit or impress potential buyers. Our comprehensive move out cleaning services include:</p>
@@ -44,7 +44,7 @@ const Services = () => {
                   <li>Removing trash and debris</li>
                   <li>Attention to commonly overlooked areas</li>
                 </ul>
-                <h3 className="text-lg font-semibold">Moving In Service - $65/hr per cleaner</h3>
+                <h3 className="text-lg font-semibold">Moving In Service - $70/hr per cleaner</h3>
                 <p>When moving into a new home, it's important to start with a clean slate. Our move in cleaning services ensure that your new space is thoroughly cleaned and ready for you to settle in comfortably. Our move in cleaning services include:</p>
                 <ul className="list-disc pl-6">
                   <li>Deep cleaning of kitchen appliances</li>
@@ -65,7 +65,7 @@ const Services = () => {
             title="Post Construction Cleaning" 
             description={
               <>
-                <h2 className="text-xl font-semibold">Post Construction Cleaning - $60/hr per cleaner</h2>
+                <h2 className="text-xl font-semibold">Post Construction Cleaning - $65/hr per cleaner</h2>
                 <p>Our post construction cleaning service ensures your space is spotless after any renovation or construction project. We offer flexible, around-the-clock availability to fit your schedule. Our services include:</p>
                 <ul className="list-disc pl-5">
                   <li>Dusting and wiping all surfaces</li>
