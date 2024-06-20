@@ -21,7 +21,7 @@ const Services = () => {
                 <p>Our regular maintenance program is designed to keep your home in pristine condition between deep cleaning sessions. With regular visits from our professional cleaning team, you can enjoy a consistently clean and organized living space. We tailor our maintenance services to meet your specific needs, ensuring your home always looks its best.</p>
                 <h2 className="text-xl font-semibold">Double the Cleaning Power!</h2>
                 <p>Take advantage of our special offer! When you schedule residential cleaning services with us, we'll send two cleaning specialists to your location. With two specialists working together, your cleaning will be completed in half the scheduled time, saving you time and ensuring exceptional results. Don't miss out on this opportunity to experience the convenience and efficiency of our double cleaning power!</p>
-                <p className="text-sm text-red-400">*Please note that prices are subject to change based on circumstances and competitive pricing.</p>
+                <p className="text-sm text-red-400">*Please note that prices are subject to change based on your specific needs and competitive pricing.</p>
               </>
             }
           />
@@ -56,7 +56,7 @@ const Services = () => {
                   <li>Attention to commonly overlooked areas</li>
                 </ul>
                 <p>You can trust us to provide exceptional move in and move out cleaning services for your home in New York City.</p>
-                <p className="text-sm text-red-400">*Please note that prices are subject to change based on circumstances and competitive pricing.</p>
+                <p className="text-sm text-red-400">*Please note that prices are subject to change based on your specific needs and competitive pricing.</p>
               </>
             }
           />
@@ -77,7 +77,7 @@ const Services = () => {
                   <li>Disposing of construction debris</li>
                 </ul>
                 <p>We tailor our services to meet your specific needs, ensuring complete satisfaction and a pristine environment.</p>
-                <p className="text-sm text-red-400">*Please note that prices are subject to change based on circumstances and competitive pricing.</p>
+                <p className="text-sm text-red-400">*Please note that prices are subject to change based on your specific needs and competitive pricing.</p>
               </>
             }
           />
