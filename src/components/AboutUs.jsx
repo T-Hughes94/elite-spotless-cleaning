@@ -15,9 +15,7 @@ const AboutUs = () => {
 
           Our principles revolve around building trust and forging lasting relationships with our valued clients. We achieve this through maintaining transparency and demonstrating a commitment to excellence. Our ultimate goal is to exceed expectations while delivering service that creates a lasting impact on every single client we have the privilege to serve.
 
-          {/* In our organization, we understand that a clean environment is more than just a visually appealing space; it’s a sanctuary that fosters clarity, tranquility, and overall well-being. Our comprehensive cleaning solutions are designed to cater to the specific needs of our clients, ensuring that their homes are not only spotless but also conducive to a healthy and harmonious lifestyle.
-
-          Join us in our journey to create cleaner, healthier, and more beautiful living spaces. Together, we can transform your home into a pristine sanctuary where serenity and cleanliness reign supreme. */}
+         ful living spaces. Together, we can transform your home into a pristine sanctuary where serenity and cleanliness reign supreme.
         </p>
       </div>
     </div>

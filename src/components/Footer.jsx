@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaEnvelope, FaPhone, FaInstagram } from 'react-icons/fa';
+import { FaEnvelope, FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -8,7 +8,12 @@ const Footer = () => {
         <div className="mb-4 md:mb-0">
           <span className="text-2xl md:text-3xl font-bold">Contact Us:</span>
           <ul className="mt-2 text-lg">
-            <li><FaEnvelope className="inline-block mr-3 text-xl" />ecsnyc2024@gmail.com</li>
+            <li>
+              <FaEnvelope className="inline-block mr-3 text-xl" />
+              <a href="mailto:ecsnyc2024@gmail.com" className="hover:underline">
+                ecsnyc2024@gmail.com
+              </a>
+            </li>
           </ul>
         </div>
         <div className="flex items-center">
@@ -23,4 +28,5 @@ const Footer = () => {
 };
 
 export default Footer;
+
 
