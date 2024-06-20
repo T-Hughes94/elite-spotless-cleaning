@@ -8,8 +8,7 @@ const Footer = () => {
         <div className="mb-4 md:mb-0">
           <span className="text-2xl md:text-3xl font-bold">Contact Us:</span>
           <ul className="mt-2 text-lg">
-            <li><FaEnvelope className="inline-block mr-3 text-xl" />info@elitespotlesscleaning.com</li>
-            <li><FaPhone className="inline-block mr-3 text-xl" />+1 (123) 456-7890</li>
+            <li><FaEnvelope className="inline-block mr-3 text-xl" />ecsnyc2024@gmail.com</li>
           </ul>
         </div>
         <div className="flex items-center">

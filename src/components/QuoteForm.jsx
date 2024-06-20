@@ -342,6 +342,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import emailjs from 'emailjs-com';
 
+// Initial state for the form
 const initialState = {
   name: '',
   address: '',
@@ -358,6 +359,7 @@ const initialState = {
   additionalInfo: ''
 };
 
+// Service prices for different types of services
 const servicePrices = {
   'Basic Clean': 60,
   'Deep Clean': 80,
@@ -366,8 +368,10 @@ const servicePrices = {
   'Post Construction Cleaning': 65
 };
 
+// NYC sales tax rate
 const nycSalesTaxRate = 0.08875;
 
+// Services available
 const services = [
   { category: 'Residential Cleaning', types: ['Basic Clean', 'Deep Clean', 'Regular Maintenance'] },
   'Move Out Cleaning',
@@ -380,9 +384,10 @@ function QuoteForm() {
   const [estimatedQuote, setEstimatedQuote] = useState('');
 
   useEffect(() => {
-    emailjs.init('rsbGEJxjHFwGijiu9'); // Initialize with your public key
+    emailjs.init('b0OixJ_1hsp8gNAkp'); // Initialize with your public key
   }, []);
 
+  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -404,6 +409,7 @@ function QuoteForm() {
     sendEmails(templateParams, estimatedQuoteValue);
   };
 
+  // Calculate the estimated quote based on the service and time
   const calculateEstimatedQuote = () => {
     const hours = parseInt(formState.estimatedTimeNeeded, 10);
     let hourlyRate = 0;
@@ -429,6 +435,7 @@ function QuoteForm() {
     return `$${totalCost.toFixed(2)}`;
   };
 
+  // Validate the entire form
   const validateForm = () => {
     return (
       validateName(formState.name) &&
@@ -439,44 +446,33 @@ function QuoteForm() {
     );
   };
 
+  // Validation functions for each field
   const validateName = (name) => /^[A-Za-z\s]{1,}$/.test(name);
-
   const validatePhone = (phone) => /^[0-9]{10}$/.test(phone);
-
   const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-
   const validateAddress = (address) => /^[A-Za-z0-9\s,-]{1,}$/.test(address);
-
   const validateZipCode = (zipCode) => /^[0-9]{5}(?:-[0-9]{4})?$/.test(zipCode);
 
+  // Send emails to the service provider
   const sendEmails = async (templateParams, estimatedQuoteValue) => {
     try {
       // Send email to service provider
-      await emailjs.send('service_xxv72qk', 'template_jalo3u3', templateParams);
+      await emailjs.send('service_kbv0pek', 'template_dzhbgmc', templateParams);
       console.log('Email to service provider sent successfully');
     } catch (error) {
       console.error('Failed to send email to service provider:', error);
-    }
-
-    try {
-      // Send email to customer
-      await emailjs.send('service_xxv72qk', 'template_tnso6wn', {
-        ...templateParams,
-        to_name: formState.name
-      });
-      console.log('Email to customer sent successfully');
-    } catch (error) {
-      console.error('Failed to send email to customer:', error);
     }
 
     setShowConfirmation(true);
     setEstimatedQuote(estimatedQuoteValue);
   };
 
+  // Handle input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormState(prevState => ({ ...prevState, [name]: value }));
   };
+
   return (
     <div className="w-full bg-white py-16">
       <div id="quote" className="max-w-[1040px] mx-auto p-4 bg-[#94c2d2] shadow-lg rounded-lg">
@@ -614,6 +610,7 @@ function QuoteForm() {
                   value={formState.numberOfSpecialists}
                   onChange={handleChange}
                   min='1'
+                  max='2'
                   className='border-2 rounded-lg p-3 border-gray-300 focus:border-[#001b5e] focus:ring-[#001b5e]'
                   required
                 />
@@ -656,7 +653,7 @@ function QuoteForm() {
               Thank you for your request!
             </p>
             <p className='py-4'>
-              We will contact you shortly to confirm the details and schedule your service.
+              We have received your submission and will contact you shortly to confirm the details and schedule your cleaning.
             </p>
             <p className='py-4'>
               Your estimated quote is: <strong className='text-xl text-red-500'>{estimatedQuote}</strong>
@@ -669,5 +666,7 @@ function QuoteForm() {
         )}
       </div>
     </div>
-  )};
+  );
+}
+
 export default QuoteForm;
