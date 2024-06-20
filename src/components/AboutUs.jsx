@@ -1,4 +1,3 @@
-
 import React from 'react';
 import cityImage from '../assets/newyork.png'; // Update the path to your image
 
