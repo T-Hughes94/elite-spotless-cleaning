@@ -10,12 +10,13 @@ const Home = () => {
   };
 
   return (
-    <div id="home" className="relative w-full h-screen flex items-center justify-center bg-cover bg-center"
+    <div id="home" className="relative w-full min-h-screen flex items-center justify-center bg-cover bg-center"
       style={{ 
         backgroundImage: `url(${ecsLogo})`,
         backgroundSize: 'contain', 
         backgroundRepeat: 'no-repeat',
-        paddingTop: '4rem', // Adjust the padding top as needed
+        paddingTop: '4rem', // Adjust the top padding as needed
+        paddingBottom: '4rem', // Adjust the bottom padding as needed
       }}
     >
       <div className="bg-white/70 p-8 rounded-lg shadow-lg max-w-3xl text-center mx-4 md:mx-auto">
@@ -36,6 +37,7 @@ const Home = () => {
 };
 
 export default Home;
+
 
 
 
