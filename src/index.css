@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 
+/* Add this CSS to your stylesheet */
 body {
     margin: 0;
     padding: 0;
@@ -11,12 +12,13 @@ body {
   #home {
     position: relative;
     width: 100%;
-    height: 100vh; /* Full viewport height */
+    height: calc(100vh - 60px); /* Subtract the navbar height */
     display: flex;
     align-items: center;
     justify-content: center;
     background-size: cover;
     background-position: center;
+    padding-top: 60px; /* Same as the height of the navbar */
   }
   
   .navbar {
@@ -28,12 +30,9 @@ body {
     z-index: 1000;
   }
   
-  .main-content {
-    margin-top: 60px; /* Adjust based on your navbar height */
-  }
-  
   @media (max-width: 768px) {
     #home {
+      height: calc(100vh - 60px); /* Ensure this rule applies to smaller screens too */
       background-size: contain; /* Adjust the background size for smaller screens */
     }
   }
