@@ -15,6 +15,7 @@ const Home = () => {
         backgroundImage: `url(${ecsLogo})`,
         backgroundSize: 'contain', 
         backgroundRepeat: 'no-repeat',
+        paddingTop: '4rem', // Adjust the padding top as needed
       }}
     >
       <div className="bg-white/70 p-8 rounded-lg shadow-lg max-w-3xl text-center mx-4 md:mx-auto">
@@ -35,6 +36,7 @@ const Home = () => {
 };
 
 export default Home;
+
 
 
 
