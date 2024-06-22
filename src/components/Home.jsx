@@ -20,7 +20,7 @@ const Home = () => {
       }}
     >
       <div className="bg-white/70 p-8 rounded-lg shadow-lg max-w-3xl text-center mx-4 md:mx-auto">
-        <h1 className="text-5xl font-bold mb-4 text-gray-800">Elite Spotless Cleaning</h1>
+        <h1 className="text-4xl font-bold mb-4 text-gray-800">Elite Spotless Cleaning</h1>
         <p className="text-xl font-bold md:text-2xl text-gray-950 mb-4">
           Elite Spotless Cleaning offers a unique and unparalleled service. Our primary focus is on exceeding our clients' expectations by consistently going the extra mile for you.
         </p>
